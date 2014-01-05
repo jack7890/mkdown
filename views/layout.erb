@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
-	<link href="/css/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
-	<link href="/css/google_code_prettify/eighties.css" type="text/css" rel="stylesheet" />
-	<link rel="icon" type="image/png" href="/img/favicon.ico?v=2">
-  <script type="text/javascript" src="/js/ga.js"></script>
-	<title><%= @title %></title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<% if defined?(@font_url) %>
-		<link rel="stylesheet" type="text/css" href="<%= @font_url %>" />
-	<% end %>
+  <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+  <link href="/css/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <link href="/css/google_code_prettify/eighties.css" type="text/css" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="/img/favicon.ico?v=2">
+  <title><%= @title %></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <% if defined?(@font_url) %>
+    <link rel="stylesheet" type="text/css" href="<%= @font_url %>" />
+  <% end %>
 </head>
 <body>
 
-	<%= yield %>
+  <%= yield %>
 
-	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-	<script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="/js/google_code_prettify/prettify.js"></script>
   <script type="text/javascript" src="/js/main.js"></script>
 </body>
