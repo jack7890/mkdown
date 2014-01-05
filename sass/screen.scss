@@ -1,0 +1,202 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+
+$bg_color         : #01222d;
+$main_font_color  : #dee8e8;
+
+body {
+  background: $bg_color;
+  color: $main_font_color;
+  font-size: 18px;
+  line-height: 28px;
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: -0.01em;
+}
+.main {
+  margin: 48px auto 30px;
+  text-align: left;
+  width: 510px;
+}
+h1, h2, h3, h4, h5, h6, p, body {
+  font-family: 'Whitney SSm A', 'Whitney SSm B', HelveticaNeue, 'Helvetica Neue', HelveticaNeueRoman, HelveticaNeue-Roman, 'Helvetica Neue Roman', Helvetica, Tahoma, Geneva, Arial, sans-serif;;
+  font-weight: 400;
+  font-style: normal;
+  text-ren­der­ing: optimizeLegibility;
+}
+p + h1, p + h2, p + h3, p + h4, p + h5, p + h6 {
+  padding-top: 14px;
+}
+h1 {
+  font-size: 60px;
+  line-height: 64px;
+  padding-bottom: 28px;
+  letter-spacing: -0.04em;
+}
+h2 {
+  font-size: 36px;
+  padding-bottom: 15px;
+  line-height: 39px;
+  letter-spacing: -0.04em;
+}
+h1, h2 {
+  margin-left: -1px; /* Whitney seems to be pushing things slightly left for the large headers */
+}
+* + h1 {
+  padding-top: 12px;
+}
+h3 {
+  font-size: 28px;
+  line-height: 30px;
+  padding-bottom: 11px;
+  letter-spacing: -0.03em;
+}
+h4, h5, h6 {
+  font-style: italic;
+}
+h4 {
+  padding-bottom: 8px;
+  font-size: 20px;
+  line-height: 22px;
+  letter-spacing: -0.03em;
+}
+h5, h6 {
+  padding-bottom: 7px;
+  font-size: 17px;
+  line-height: 19px;
+  letter-spacing: -0.03em;
+}
+em {
+  font-style: italic;
+}
+ul, ol {
+  padding-left: 38px;
+  margin-bottom: 30px;
+}
+ul {
+  list-style-type: disc;
+}
+ol {
+  list-style-type: upper-hexadecimal;
+}
+ul li, ol li {
+  margin: 16px 0;
+}
+p, blockquote {
+  margin-bottom: 22px;
+}
+p + h1 {
+  padding-top: 30px;
+}
+blockquote {
+  padding-left: 38px;
+  border-left: 10px solid #184655;
+}
+blockquote p {
+  font-size: 15px;
+  line-height: 25px;
+  font-weight: 400;
+}
+blockquote blockquote {
+  margin-top: 22px;
+}
+.topbar_container {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+}
+.topbar {
+  background: rgba(123, 198, 220, 0.8);
+  bordre-bottom: rgba(1, 20, 26, 0.8);
+  height: 5px;
+  width: 100%;
+  margin: 0 auto;
+}
+a {
+  transition: all 0.4s;
+}
+a:hover {
+  text-decoration: none;
+  color: #37bcff;
+  text-shadow: 0 0 4px rgba(171, 227, 255, 0.43);
+}
+a:active {
+  color: #2db1f3;
+}
+hr {
+  margin: 30px 0;
+  border: 0;
+  border-top: 2px solid #184655;
+}
+pre {
+  background: #184655;
+  padding: 19px 26px;
+}
+pre code, code {
+  color: #dee8e8;
+  background: #184655;
+}
+code {
+  border: 1px solid #031116;
+  font-size: 15px;
+  font-family: Consolas, 'Liberation Mono', Courier, monospace;
+  margin: 0 2px;
+  padding: 2px 5px 1px;
+  position: relative;
+  top: -2px;
+}
+pre code {
+  white-space: pre-wrap;
+}
+a#original {
+  text-align: center;
+  width: 100%;
+  display: block;
+  margin-top: 112px;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  font-size: 13px;
+  color: #0F3C4B;
+  border-top: 1px solid #052E3C;
+  padding-top: 13px;
+}
+a#original:hover {
+  text-shadow: none;
+  color: #2a5665;
+  border-top: 1px solid #0d3a49;
+}
+strong {
+  font-weight: 900;
+}
+
+@media only screen and (max-device-width: 1024px) {
+  .main {
+    overflow: hidden;
+  }
+}
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+  .main {
+    margin-top: 36px;
+  }
+}
+@media only screen and (max-device-width: 480px) {
+  .main {
+    margin-top: 20px;
+    width: 94%;
+  }
+  ul, ol {
+    padding-left: 20px;
+  }
+  body {
+    font-size: 16px;
+  }
+  blockquote p {
+    font-size: 13px;
+  }
+}
