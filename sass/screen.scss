@@ -38,7 +38,7 @@ h1 {
 }
 h2 {
   font-size: 36px;
-  padding-bottom: 15px;
+  padding-bottom: 21px;
   line-height: 39px;
   letter-spacing: -0.04em;
 }
@@ -51,22 +51,16 @@ h1, h2 {
 h3 {
   font-size: 28px;
   line-height: 30px;
-  padding-bottom: 11px;
+  padding-bottom: 18px;
   letter-spacing: -0.03em;
 }
 h4, h5, h6 {
   font-style: italic;
 }
-h4 {
-  padding-bottom: 10px;
+h4, h5, h6 {
+  padding-bottom: 12px;
   font-size: 20px;
   line-height: 22px;
-  letter-spacing: -0.03em;
-}
-h5, h6 {
-  padding-bottom: 9px;
-  font-size: 17px;
-  line-height: 19px;
   letter-spacing: -0.03em;
 }
 em {
@@ -87,6 +81,9 @@ ul li, ol li {
 }
 p, blockquote {
   margin-bottom: 22px;
+}
+div.highlight {
+  margin-bottom: 34px;
 }
 p + h1 {
   padding-top: 30px;
