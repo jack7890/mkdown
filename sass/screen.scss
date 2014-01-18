@@ -139,7 +139,11 @@ pre {
 }
 pre code, code {
   color: #dee8e8;
-  background: #184655;
+  background: #2d2d2d;
+}
+pre.prettyprint {
+  border: 1px solid #343A41;
+  padding: 18px 25px;
 }
 code {
   border: 1px solid #031116;

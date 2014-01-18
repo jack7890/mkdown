@@ -1,4 +1,4 @@
 $(function() {
-	$('pre code').addClass('prettyprint');
+	$('pre').addClass('prettyprint');
 	prettyPrint();
 });
