@@ -58,7 +58,7 @@ h3 {
   line-height: 22px;
   padding-bottom: 22px;
   letter-spacing: -0.03em;
-
+  color: #dce5eb;
 }
 h4, h5, h6 {
   padding-bottom: 18px;
@@ -84,6 +84,9 @@ ol {
 }
 ul li, ol li {
   margin: 16px 0;
+}
+h1 + ul, h2 + ul, h3 + ul, h4 + ul, h5 + ul, h6 + ul, h1 + ol, h2 + ol, h3 + ol, h4 + ol, h5 + ol, h6 + ol {
+  margin-top: -16px;
 }
 p {
   margin-top: 1px;
@@ -151,6 +154,7 @@ pre.prettyprint {
   border: 1px solid #3F546D;
   background: #184655;
   padding: 18px 25px;
+  margin-bottm: 38px;
 }
 li p a img {
   margin-top: 14px;
@@ -187,6 +191,7 @@ a#original:hover {
 }
 strong {
   font-weight: 900;
+  color: #dce5eb;
 }
 
 @media only screen and (max-device-width: 1024px) {
