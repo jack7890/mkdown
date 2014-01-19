@@ -42,9 +42,9 @@ h1 {
   padding-bottom: 26px;
 }
 h2 {
-  font-size: 22px;
-  padding-bottom: 24px;
+  font-size: 23px;
   line-height: 26px;
+  padding-bottom: 24px;
   letter-spacing: -0.04em;
 }
 h1, h2 {
@@ -58,11 +58,10 @@ h3 {
   line-height: 22px;
   padding-bottom: 22px;
   letter-spacing: -0.03em;
-  color: #dce5eb;
 }
 h4, h5, h6 {
-  padding-bottom: 18px;
   font-size: 17px;
+  padding-bottom: 18px;
   line-height: 19px;
   letter-spacing: -0.03em;
 }
@@ -87,9 +86,6 @@ ul li, ol li {
 }
 h1 + ul, h2 + ul, h3 + ul, h4 + ul, h5 + ul, h6 + ul, h1 + ol, h2 + ol, h3 + ol, h4 + ol, h5 + ol, h6 + ol {
   margin-top: -16px;
-}
-p {
-  margin-top: 1px;
 }
 p, blockquote {
   margin-bottom: 22px;
