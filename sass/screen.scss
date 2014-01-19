@@ -27,13 +27,16 @@ h1, h2, h3, h4, h5, h6, p, body {
   font-style: normal;
   text-ren­der­ing: optimizeLegibility;
 }
+h1, h2, h3, h4, h5, h6 {
+  color: #EAF3F3;
+}
 p + h1, p + h2, p + h3, p + h4, p + h5, p + h6 {
   padding-top: 14px;
 }
 h1 {
   font-size: 60px;
   line-height: 64px;
-  padding-bottom: 28px;
+  padding-bottom: 24px;
   letter-spacing: -0.04em;
 }
 h2 {
@@ -55,12 +58,10 @@ h3 {
   letter-spacing: -0.03em;
 }
 h4, h5, h6 {
-  font-style: italic;
-}
-h4, h5, h6 {
   padding-bottom: 12px;
-  font-size: 20px;
-  line-height: 22px;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 600;
   letter-spacing: -0.03em;
 }
 em {
