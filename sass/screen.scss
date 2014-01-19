@@ -6,13 +6,13 @@
 @import "compass/reset";
 
 $bg_color         : #01222d;
-$main_font_color  : #dee8e8;
+$main_font_color  : #d5dee2;
 
 body {
   background: $bg_color;
   color: $main_font_color;
   font-size: 18px;
-  line-height: 28px;
+  line-height: 27px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   letter-spacing: -0.01em;
@@ -29,21 +29,22 @@ h1, h2, h3, h4, h5, h6, p, body {
   text-ren­der­ing: optimizeLegibility;
 }
 h1, h2, h3, h4, h5, h6 {
-  color: #EAF3F3;
+  color: #fff;
+  font-weight: 700;
 }
 p + h1, p + h2, p + h3, p + h4, p + h5, p + h6 {
   padding-top: 14px;
 }
 h1 {
-  font-size: 60px;
-  line-height: 64px;
-  padding-bottom: 24px;
+  font-size: 28px;
   letter-spacing: -0.04em;
+  line-height: 32px;
+  padding-bottom: 26px;
 }
 h2 {
-  font-size: 36px;
-  padding-bottom: 21px;
-  line-height: 39px;
+  font-size: 22px;
+  padding-bottom: 24px;
+  line-height: 26px;
   letter-spacing: -0.04em;
 }
 h1, h2 {
@@ -53,17 +54,20 @@ h1, h2 {
   padding-top: 12px;
 }
 h3 {
-  font-size: 28px;
-  line-height: 30px;
-  padding-bottom: 18px;
+  font-size: 19px;
+  line-height: 22px;
+  padding-bottom: 22px;
   letter-spacing: -0.03em;
+
 }
 h4, h5, h6 {
-  padding-bottom: 12px;
-  font-size: 18px;
-  line-height: 20px;
-  font-weight: 600;
+  padding-bottom: 18px;
+  font-size: 17px;
+  line-height: 19px;
   letter-spacing: -0.03em;
+}
+h5, h6 {
+  color: #b6c7d3;
 }
 em {
   font-style: italic;
@@ -80,6 +84,9 @@ ol {
 }
 ul li, ol li {
   margin: 16px 0;
+}
+p {
+  margin-top: 1px;
 }
 p, blockquote {
   margin-bottom: 22px;

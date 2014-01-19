@@ -71,9 +71,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /* line 11, ../../sass/screen.scss */
 body {
   background: #01222d;
-  color: #dee8e8;
+  color: #d5dee2;
   font-size: 18px;
-  line-height: 28px;
+  line-height: 27px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   letter-spacing: -0.01em;
@@ -96,118 +96,128 @@ h1, h2, h3, h4, h5, h6, p, body {
 
 /* line 31, ../../sass/screen.scss */
 h1, h2, h3, h4, h5, h6 {
-  color: #EAF3F3;
+  color: #fff;
+  font-weight: 700;
 }
 
-/* line 34, ../../sass/screen.scss */
+/* line 35, ../../sass/screen.scss */
 p + h1, p + h2, p + h3, p + h4, p + h5, p + h6 {
   padding-top: 14px;
 }
 
-/* line 37, ../../sass/screen.scss */
+/* line 38, ../../sass/screen.scss */
 h1 {
-  font-size: 60px;
-  line-height: 64px;
-  padding-bottom: 24px;
+  font-size: 28px;
   letter-spacing: -0.04em;
+  line-height: 32px;
+  padding-bottom: 26px;
 }
 
-/* line 43, ../../sass/screen.scss */
+/* line 44, ../../sass/screen.scss */
 h2 {
-  font-size: 36px;
-  padding-bottom: 21px;
-  line-height: 39px;
+  font-size: 22px;
+  padding-bottom: 24px;
+  line-height: 26px;
   letter-spacing: -0.04em;
 }
 
-/* line 49, ../../sass/screen.scss */
+/* line 50, ../../sass/screen.scss */
 h1, h2 {
   margin-left: -1px;
   /* Whitney seems to be pushing things slightly left for the large headers */
 }
 
-/* line 52, ../../sass/screen.scss */
+/* line 53, ../../sass/screen.scss */
 * + h1 {
   padding-top: 12px;
 }
 
-/* line 55, ../../sass/screen.scss */
+/* line 56, ../../sass/screen.scss */
 h3 {
-  font-size: 28px;
-  line-height: 30px;
-  padding-bottom: 18px;
+  font-size: 19px;
+  line-height: 22px;
+  padding-bottom: 22px;
   letter-spacing: -0.03em;
 }
 
-/* line 61, ../../sass/screen.scss */
+/* line 63, ../../sass/screen.scss */
 h4, h5, h6 {
-  padding-bottom: 12px;
-  font-size: 18px;
-  line-height: 20px;
-  font-weight: 600;
+  padding-bottom: 18px;
+  font-size: 17px;
+  line-height: 19px;
   letter-spacing: -0.03em;
 }
 
-/* line 68, ../../sass/screen.scss */
+/* line 69, ../../sass/screen.scss */
+h5, h6 {
+  color: #b6c7d3;
+}
+
+/* line 72, ../../sass/screen.scss */
 em {
   font-style: italic;
 }
 
-/* line 71, ../../sass/screen.scss */
+/* line 75, ../../sass/screen.scss */
 ul, ol {
   padding-left: 38px;
   margin-bottom: 30px;
 }
 
-/* line 75, ../../sass/screen.scss */
+/* line 79, ../../sass/screen.scss */
 ul {
   list-style-type: disc;
 }
 
-/* line 78, ../../sass/screen.scss */
+/* line 82, ../../sass/screen.scss */
 ol {
   list-style-type: upper-hexadecimal;
 }
 
-/* line 81, ../../sass/screen.scss */
+/* line 85, ../../sass/screen.scss */
 ul li, ol li {
   margin: 16px 0;
 }
 
-/* line 84, ../../sass/screen.scss */
+/* line 88, ../../sass/screen.scss */
+p {
+  margin-top: 1px;
+}
+
+/* line 91, ../../sass/screen.scss */
 p, blockquote {
   margin-bottom: 22px;
 }
 
-/* line 87, ../../sass/screen.scss */
+/* line 94, ../../sass/screen.scss */
 div.highlight {
   margin-bottom: 34px;
 }
 
-/* line 90, ../../sass/screen.scss */
+/* line 97, ../../sass/screen.scss */
 p + h1 {
   padding-top: 30px;
 }
 
-/* line 93, ../../sass/screen.scss */
+/* line 100, ../../sass/screen.scss */
 blockquote {
   padding-left: 38px;
   border-left: 10px solid #184655;
 }
 
-/* line 97, ../../sass/screen.scss */
+/* line 104, ../../sass/screen.scss */
 blockquote p {
   font-size: 15px;
   line-height: 25px;
   font-weight: 400;
 }
 
-/* line 102, ../../sass/screen.scss */
+/* line 109, ../../sass/screen.scss */
 blockquote blockquote {
   margin-top: 22px;
 }
 
-/* line 105, ../../sass/screen.scss */
+/* line 112, ../../sass/screen.scss */
 .topbar_container {
   width: 100%;
   position: fixed;
@@ -216,7 +226,7 @@ blockquote blockquote {
   height: 2px;
 }
 
-/* line 112, ../../sass/screen.scss */
+/* line 119, ../../sass/screen.scss */
 .topbar {
   background: rgba(123, 198, 220, 0.8);
   bordre-bottom: rgba(1, 20, 26, 0.8);
@@ -225,55 +235,55 @@ blockquote blockquote {
   margin: 0 auto;
 }
 
-/* line 119, ../../sass/screen.scss */
+/* line 126, ../../sass/screen.scss */
 a {
   transition: all 0.4s;
 }
 
-/* line 122, ../../sass/screen.scss */
+/* line 129, ../../sass/screen.scss */
 a:hover {
   text-decoration: none;
   color: #37bcff;
   text-shadow: 0 0 4px rgba(171, 227, 255, 0.43);
 }
 
-/* line 127, ../../sass/screen.scss */
+/* line 134, ../../sass/screen.scss */
 a:active {
   color: #2db1f3;
 }
 
-/* line 130, ../../sass/screen.scss */
+/* line 137, ../../sass/screen.scss */
 hr {
   margin: 30px 0;
   border: 0;
   border-top: 2px solid #184655;
 }
 
-/* line 135, ../../sass/screen.scss */
+/* line 142, ../../sass/screen.scss */
 pre {
   background: #184655;
   padding: 19px 26px;
 }
 
-/* line 139, ../../sass/screen.scss */
+/* line 146, ../../sass/screen.scss */
 pre code, code {
   color: #dee8e8;
   background: #184655;
 }
 
-/* line 143, ../../sass/screen.scss */
+/* line 150, ../../sass/screen.scss */
 pre.prettyprint {
   border: 1px solid #3F546D;
   background: #184655;
   padding: 18px 25px;
 }
 
-/* line 148, ../../sass/screen.scss */
+/* line 155, ../../sass/screen.scss */
 li p a img {
   margin-top: 14px;
 }
 
-/* line 151, ../../sass/screen.scss */
+/* line 158, ../../sass/screen.scss */
 code {
   border: 1px solid #031116;
   font-size: 15px;
@@ -284,12 +294,12 @@ code {
   top: -2px;
 }
 
-/* line 160, ../../sass/screen.scss */
+/* line 167, ../../sass/screen.scss */
 pre code {
   white-space: pre-wrap;
 }
 
-/* line 163, ../../sass/screen.scss */
+/* line 170, ../../sass/screen.scss */
 a#original {
   text-align: center;
   width: 100%;
@@ -304,48 +314,48 @@ a#original {
   padding-top: 13px;
 }
 
-/* line 176, ../../sass/screen.scss */
+/* line 183, ../../sass/screen.scss */
 a#original:hover {
   text-shadow: none;
   color: #2a5665;
   border-top: 1px solid #0d3a49;
 }
 
-/* line 181, ../../sass/screen.scss */
+/* line 188, ../../sass/screen.scss */
 strong {
   font-weight: 900;
 }
 
 @media only screen and (max-device-width: 1024px) {
-  /* line 186, ../../sass/screen.scss */
+  /* line 193, ../../sass/screen.scss */
   .main {
     overflow: hidden;
   }
 }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-  /* line 191, ../../sass/screen.scss */
+  /* line 198, ../../sass/screen.scss */
   .main {
     margin-top: 36px;
   }
 }
 @media only screen and (max-device-width: 480px) {
-  /* line 196, ../../sass/screen.scss */
+  /* line 203, ../../sass/screen.scss */
   .main {
     margin-top: 20px;
     width: 94%;
   }
 
-  /* line 200, ../../sass/screen.scss */
+  /* line 207, ../../sass/screen.scss */
   ul, ol {
     padding-left: 20px;
   }
 
-  /* line 203, ../../sass/screen.scss */
+  /* line 210, ../../sass/screen.scss */
   body {
     font-size: 16px;
   }
 
-  /* line 206, ../../sass/screen.scss */
+  /* line 213, ../../sass/screen.scss */
   blockquote p {
     font-size: 13px;
   }
