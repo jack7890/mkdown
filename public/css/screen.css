@@ -256,21 +256,22 @@ pre {
 /* line 137, ../../sass/screen.scss */
 pre code, code {
   color: #dee8e8;
-  background: #2d2d2d;
+  background: #184655;
 }
 
 /* line 141, ../../sass/screen.scss */
 pre.prettyprint {
-  border: 1px solid #343A41;
+  border: 1px solid #3F546D;
+  background: #184655;
   padding: 18px 25px;
 }
 
-/* line 145, ../../sass/screen.scss */
+/* line 146, ../../sass/screen.scss */
 li p a img {
   margin-top: 14px;
 }
 
-/* line 148, ../../sass/screen.scss */
+/* line 149, ../../sass/screen.scss */
 code {
   border: 1px solid #031116;
   font-size: 15px;
@@ -281,12 +282,12 @@ code {
   top: -2px;
 }
 
-/* line 157, ../../sass/screen.scss */
+/* line 158, ../../sass/screen.scss */
 pre code {
   white-space: pre-wrap;
 }
 
-/* line 160, ../../sass/screen.scss */
+/* line 161, ../../sass/screen.scss */
 a#original {
   text-align: center;
   width: 100%;
@@ -301,48 +302,48 @@ a#original {
   padding-top: 13px;
 }
 
-/* line 173, ../../sass/screen.scss */
+/* line 174, ../../sass/screen.scss */
 a#original:hover {
   text-shadow: none;
   color: #2a5665;
   border-top: 1px solid #0d3a49;
 }
 
-/* line 178, ../../sass/screen.scss */
+/* line 179, ../../sass/screen.scss */
 strong {
   font-weight: 900;
 }
 
 @media only screen and (max-device-width: 1024px) {
-  /* line 183, ../../sass/screen.scss */
+  /* line 184, ../../sass/screen.scss */
   .main {
     overflow: hidden;
   }
 }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-  /* line 188, ../../sass/screen.scss */
+  /* line 189, ../../sass/screen.scss */
   .main {
     margin-top: 36px;
   }
 }
 @media only screen and (max-device-width: 480px) {
-  /* line 193, ../../sass/screen.scss */
+  /* line 194, ../../sass/screen.scss */
   .main {
     margin-top: 20px;
     width: 94%;
   }
 
-  /* line 197, ../../sass/screen.scss */
+  /* line 198, ../../sass/screen.scss */
   ul, ol {
     padding-left: 20px;
   }
 
-  /* line 200, ../../sass/screen.scss */
+  /* line 201, ../../sass/screen.scss */
   body {
     font-size: 16px;
   }
 
-  /* line 203, ../../sass/screen.scss */
+  /* line 204, ../../sass/screen.scss */
   blockquote p {
     font-size: 13px;
   }
