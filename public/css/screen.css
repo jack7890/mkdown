@@ -205,19 +205,17 @@ blockquote {
   border-left: 10px solid #184655;
   margin: 28px 0;
 }
-
-/* line 104, ../../sass/screen.scss */
+/* line 103, ../../sass/screen.scss */
 blockquote p {
   font-size: 15px;
   line-height: 25px;
   font-weight: 400;
 }
-/* line 108, ../../sass/screen.scss */
+/* line 107, ../../sass/screen.scss */
 blockquote p + p {
   margin-top: 20px;
 }
-
-/* line 112, ../../sass/screen.scss */
+/* line 111, ../../sass/screen.scss */
 blockquote blockquote {
   margin-top: 22px;
 }
@@ -244,15 +242,13 @@ blockquote blockquote {
 a {
   transition: all 0.4s;
 }
-
-/* line 132, ../../sass/screen.scss */
+/* line 131, ../../sass/screen.scss */
 a:hover {
   text-decoration: none;
   color: #37bcff;
   text-shadow: 0 0 4px rgba(171, 227, 255, 0.43);
 }
-
-/* line 137, ../../sass/screen.scss */
+/* line 136, ../../sass/screen.scss */
 a:active {
   color: #2db1f3;
 }
@@ -269,19 +265,18 @@ pre {
   background: #184655;
   padding: 19px 26px;
 }
-
-/* line 149, ../../sass/screen.scss */
-pre code, code {
-  color: #dee8e8;
-  background: #184655;
-}
-
-/* line 153, ../../sass/screen.scss */
+/* line 148, ../../sass/screen.scss */
 pre.prettyprint {
   border: 1px solid #3F546D;
   background: #184655;
   padding: 18px 25px;
   margin-bottm: 38px;
+}
+
+/* line 155, ../../sass/screen.scss */
+pre code, code {
+  color: #dee8e8;
+  background: #184655;
 }
 
 /* line 159, ../../sass/screen.scss */
@@ -300,12 +295,12 @@ code {
   top: -2px;
 }
 
-/* line 171, ../../sass/screen.scss */
+/* line 172, ../../sass/screen.scss */
 pre code {
   white-space: pre-wrap;
 }
 
-/* line 174, ../../sass/screen.scss */
+/* line 176, ../../sass/screen.scss */
 a#original {
   text-align: center;
   width: 100%;
@@ -319,50 +314,49 @@ a#original {
   border-top: 1px solid #052E3C;
   padding-top: 13px;
 }
-
-/* line 187, ../../sass/screen.scss */
+/* line 188, ../../sass/screen.scss */
 a#original:hover {
   text-shadow: none;
   color: #2a5665;
   border-top: 1px solid #0d3a49;
 }
 
-/* line 192, ../../sass/screen.scss */
+/* line 194, ../../sass/screen.scss */
 strong {
   font-weight: 900;
   color: #dce5eb;
 }
 
 @media only screen and (max-device-width: 1024px) {
-  /* line 198, ../../sass/screen.scss */
+  /* line 200, ../../sass/screen.scss */
   .main {
     overflow: hidden;
   }
 }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-  /* line 203, ../../sass/screen.scss */
+  /* line 205, ../../sass/screen.scss */
   .main {
     margin-top: 36px;
   }
 }
 @media only screen and (max-device-width: 480px) {
-  /* line 208, ../../sass/screen.scss */
+  /* line 210, ../../sass/screen.scss */
   .main {
     margin-top: 20px;
     width: 94%;
   }
 
-  /* line 212, ../../sass/screen.scss */
+  /* line 214, ../../sass/screen.scss */
   ul, ol {
     padding-left: 20px;
   }
 
-  /* line 215, ../../sass/screen.scss */
+  /* line 217, ../../sass/screen.scss */
   body {
     font-size: 16px;
   }
 
-  /* line 218, ../../sass/screen.scss */
+  /* line 220, ../../sass/screen.scss */
   blockquote p {
     font-size: 13px;
   }

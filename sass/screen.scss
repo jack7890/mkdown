@@ -100,17 +100,17 @@ blockquote {
   padding-left: 38px;
   border-left: 10px solid #184655;
   margin: 28px 0;
-}
-blockquote p {
-  font-size: 15px;
-  line-height: 25px;
-  font-weight: 400;
-  & + p {
-    margin-top: 20px;
+  p {
+    font-size: 15px;
+    line-height: 25px;
+    font-weight: 400;
+    & + p {
+      margin-top: 20px;
+    }
   }
-}
-blockquote blockquote {
-  margin-top: 22px;
+  blockquote {
+    margin-top: 22px;
+  }
 }
 .topbar_container {
   width: 100%;
@@ -128,14 +128,14 @@ blockquote blockquote {
 }
 a {
   transition: all 0.4s;
-}
-a:hover {
-  text-decoration: none;
-  color: #37bcff;
-  text-shadow: 0 0 4px rgba(171, 227, 255, 0.43);
-}
-a:active {
-  color: #2db1f3;
+  &:hover {
+    text-decoration: none;
+    color: #37bcff;
+    text-shadow: 0 0 4px rgba(171, 227, 255, 0.43);
+  }
+  &:active {
+    color: #2db1f3;
+  }
 }
 hr {
   margin: 30px 0;
@@ -145,16 +145,16 @@ hr {
 pre {
   background: #184655;
   padding: 19px 26px;
+  &.prettyprint {
+    border: 1px solid #3F546D;
+    background: #184655;
+    padding: 18px 25px;
+    margin-bottm: 38px;
+  }
 }
 pre code, code {
   color: #dee8e8;
   background: #184655;
-}
-pre.prettyprint {
-  border: 1px solid #3F546D;
-  background: #184655;
-  padding: 18px 25px;
-  margin-bottm: 38px;
 }
 li a img {
   margin-top: 14px;
@@ -168,8 +168,10 @@ code {
   position: relative;
   top: -2px;
 }
-pre code {
-  white-space: pre-wrap;
+pre {
+  code {
+    white-space: pre-wrap;
+  }
 }
 a#original {
   text-align: center;
@@ -183,11 +185,11 @@ a#original {
   color: #0F3C4B;
   border-top: 1px solid #052E3C;
   padding-top: 13px;
-}
-a#original:hover {
-  text-shadow: none;
-  color: #2a5665;
-  border-top: 1px solid #0d3a49;
+  &:hover {
+    text-shadow: none;
+    color: #2a5665;
+    border-top: 1px solid #0d3a49;
+  }
 }
 strong {
   font-weight: 900;
