@@ -5,3 +5,6 @@ gem "sinatra-contrib"
 gem "shotgun"
 gem "compass"
 gem "rest-client"
+gem "data_mapper"
+gem "dm-sqlite-adapter"
+gem 'sqlite3'
