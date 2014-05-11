@@ -50,14 +50,10 @@ end
         :content  => http,
         :etag     => http.headers[:etag]
       )
+      cached = false
     else
       # If the gist has been stored in the db, check to see if the etag has changed
-      if defined?(settings.github["username"]) and defined?(settings.github["pasword"])
-        authenticated = true
-      else
-        authenticated = false
-      end
-      http, cached = request_gist_with_etag(params[:id], authenticated)
+      http, cached = request_gist_with_etag(params[:id], credentials_defined)
     end
     json      = JSON.parse(http)
     @html_url = json['html_url']
@@ -76,7 +72,7 @@ end
 end
 
 def get_markup(markdown)
-  if defined?(settings.github["username"]) and defined?(settings.github["pasword"])
+  if credentials_defined
     markdown = RestClient.post "https://" + settings.github["username"] + ":" + settings.github["password"] + "@api.github.com/markdown/raw", markdown, :content_type => 'text/plain'
   else
     markdown = RestClient.post 'https://api.github.com/markdown/raw', markdown, :content_type => 'text/plain'
@@ -85,7 +81,7 @@ def get_markup(markdown)
 end
 
 def request_gist(id)
-  if defined?(settings.github["username"]) and defined?(settings.github["pasword"])
+  if credentials_defined
     http = RestClient.get "https://" + settings.github["username"] + ":" + settings.github["password"] + "@api.github.com/gists/#{id}"
   else
     http = RestClient.get "https://api.github.com/gists/#{id}"
@@ -115,4 +111,8 @@ def request_gist_with_etag(id, authenticated)
     cached = true
   end
   return http, cached
+end
+
+def credentials_defined
+  return ((settings.github["username"].class === "String") and (settings.github["password"].class === "String"))
 end
