@@ -5,19 +5,15 @@ require 'compass'
 require 'rest_client'
 require 'json'
 require 'data_mapper'
-require 'dm-sqlite-adapter'
 require 'dm-validations'
 
-config_file './config.yml'
-
-set :run, true
-set :views, File.dirname(__FILE__) + "/views"
-
 configure :development do
+  require 'dm-sqlite-adapter'
     DataMapper.setup(:default, "sqlite3://#{Dir.pwd}/db/mkdown.db")
 end
 
 configure :production do
+    require "dm-postgres-adapter"  
     DataMapper.setup(:default, ENV['HEROKU_POSTGRESQL_RED_URL'])
 end
 
@@ -25,6 +21,11 @@ configure do
   set :scss, {:style => :compact, :debug_info => false}
   Compass.add_project_configuration(File.join(Sinatra::Application.root, '/', 'config.rb'))
 end
+
+config_file './config.yml'
+
+set :run, true
+set :views, File.dirname(__FILE__) + "/views"
 
 class Gist 
   include DataMapper::Resource
