@@ -7,4 +7,5 @@ gem "compass"
 gem "rest-client"
 gem "data_mapper"
 gem "dm-sqlite-adapter"
+gem 'dm-validations'
 gem 'sqlite3'

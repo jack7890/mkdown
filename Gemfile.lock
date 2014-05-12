@@ -98,6 +98,7 @@ DEPENDENCIES
   compass
   data_mapper
   dm-sqlite-adapter
+  dm-validations
   rest-client
   shotgun
   sinatra

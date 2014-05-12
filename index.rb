@@ -6,6 +6,7 @@ require 'rest_client'
 require 'json'
 require 'data_mapper'
 require 'dm-sqlite-adapter'
+require 'dm-validations'
 
 config_file './config.yml'
 
@@ -44,29 +45,30 @@ end
     # Check to see if this gist has ever been stored in the db
     if (Gist.count(:id => params[:id]) === 0)
       # If it hasn't been stored in the db, request it and store the result
-      http = request_gist(params[:id])
-      @sgist = Gist.create(
+      http, cached = request_gist(params[:id], false)
+      gist = Gist.new
+      gist.attributes = {
         :id       => params[:id],
         :content  => http,
         :etag     => http.headers[:etag]
-      )
-      cached = false
+      }
     else
       # If the gist has been stored in the db, check to see if the etag has changed
-      http, cached = request_gist_with_etag(params[:id], credentials_defined)
+      http, cached = request_gist(params[:id], true)
+      gist = Gist.get(params[:id])
     end
+
     json      = JSON.parse(http)
     @html_url = json['html_url']
-    markdown  = json['files'].first[1]['content']
     @title    = "Gist #{params[:id]}"
     @font_url = settings.hfj["url"] unless !defined?(settings.hfj["url"])
     if (cached)
-      @markup = Gist.get(params[:id]).markup
+      @markup = gist.markup
     else
-      @markup = get_markup(markdown)
-      gist = Gist.get(params[:id])
-      gist.update(:markup => @markup)
+      @markup = get_markup(json['files'].first[1]['content'])
+      gist.markup = @markup
     end
+    gist.save
     erb :index
   end
 end
@@ -80,19 +82,9 @@ def get_markup(markdown)
   return markdown
 end
 
-def request_gist(id)
-  if credentials_defined
-    http = RestClient.get "https://" + settings.github["username"] + ":" + settings.github["password"] + "@api.github.com/gists/#{id}"
-  else
-    http = RestClient.get "https://api.github.com/gists/#{id}"
-  end
-  return http
-end
-
-def request_gist_with_etag(id, authenticated)
-  etag = Gist.get(id).etag
+def request_gist(id, with_etag)
   url = 
-    if (authenticated)
+    if credentials_defined
       "https://" + settings.github["username"] + ":" + settings.github["password"] + "@api.github.com/gists/#{params[:id]}"
     else
       "https://api.github.com/gists/#{params[:id]}"
@@ -101,10 +93,12 @@ def request_gist_with_etag(id, authenticated)
     http = RestClient::Request.execute(
       :method   => :get,
       :url      => url,
-      :headers  => {'If-None-Match' => "#{etag}"}
+      :headers  => with_etag ? {'If-None-Match' => "#{Gist.get(id).etag}"} : {}
     )
-    gist = Gist.get(params[:id])
-    gist.update(:etag => http.headers[:etag])
+    if with_etag
+      gist = Gist.get(params[:id])
+      gist.update(:etag => http.headers[:etag])
+    end
     cached = false
   rescue RestClient::NotModified
     http = Gist.get(params[:id]).content
