@@ -9,12 +9,12 @@ require 'dm-validations'
 
 configure :development do
   require 'dm-sqlite-adapter'
-    DataMapper.setup(:default, "sqlite3://#{Dir.pwd}/db/mkdown.db")
+  DataMapper.setup(:default, "sqlite3://#{Dir.pwd}/db/mkdown.db")
 end
 
 configure :production do
-    require "dm-postgres-adapter"  
-    DataMapper.setup(:default, ENV['HEROKU_POSTGRESQL_RED_URL'])
+  require "dm-postgres-adapter"  
+  DataMapper.setup(:default, ENV['DATABASE_URL'])
 end
 
 configure do
