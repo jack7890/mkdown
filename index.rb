@@ -13,7 +13,13 @@ config_file './config.yml'
 set :run, true
 set :views, File.dirname(__FILE__) + "/views"
 
-DataMapper.setup(:default, "sqlite3://#{Dir.pwd}/db/mkdown.db")
+configure :development do
+    DataMapper.setup(:default, "sqlite3://#{Dir.pwd}/db/mkdown.db")
+end
+
+configure :production do
+    DataMapper.setup(:default, ENV['HEROKU_POSTGRESQL_RED_URL'])
+end
 
 configure do
   set :scss, {:style => :compact, :debug_info => false}
