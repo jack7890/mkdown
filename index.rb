@@ -49,34 +49,39 @@ end
 
 ['/:id', '/g/:id'].each do |path|
   get path do
-    # Check to see if this gist has ever been stored in the db
-    if (Gist.count(:id => params[:id]) === 0)
-      # If it hasn't been stored in the db, request it and store the result
-      http, cached = request_gist(params[:id], false)
-      gist = Gist.new
-      gist.attributes = {
-        :id       => params[:id],
-        :content  => http,
-        :etag     => http.headers[:etag]
-      }
-    else
-      # If the gist has been stored in the db, check to see if the etag has changed
-      http, cached = request_gist(params[:id], true)
-      gist = Gist.get(params[:id])
-    end
+    begin
+      # Check to see if this gist has ever been stored in the db
+      if (Gist.count(:id => params[:id]) === 0)
+        # If it hasn't been stored in the db, request it and store the result
+        http, cached = request_gist(params[:id], false)
+        gist = Gist.new
+        gist.attributes = {
+          :id       => params[:id],
+          :content  => http,
+          :etag     => http.headers[:etag]
+        }
+      else
+        # If the gist has been stored in the db, check to see if the etag has changed
+        http, cached = request_gist(params[:id], true)
+        gist = Gist.get(params[:id])
+      end
 
-    json      = JSON.parse(http)
-    @html_url = json['html_url']
-    @title    = "Gist #{params[:id]}"
-    @font_url = settings.hfj["url"] unless !defined?(settings.hfj["url"])
-    if (cached)
-      @markup = gist.markup
-    else
-      @markup = get_markup(json['files'].first[1]['content'])
-      gist.markup = @markup
+      json      = JSON.parse(http)
+      @html_url = json['html_url']
+      @title    = "Gist #{params[:id]}"
+      @font_url = settings.hfj["url"] unless !defined?(settings.hfj["url"])
+      if (cached)
+        @markup = gist.markup
+      else
+        @markup = get_markup(json['files'].first[1]['content'])
+        gist.markup = @markup
+      end
+      gist.save
+      erb :index
+    rescue RestClient::ResourceNotFound
+      @id = params[:id]
+      erb :notfound
     end
-    gist.save
-    erb :index
   end
 end
 
