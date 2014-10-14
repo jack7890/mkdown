@@ -20,7 +20,7 @@ body {
 .main {
   margin: 48px auto 30px;
   text-align: left;
-  width: 510px;
+  width: 592px;
 }
 h1, h2, h3, h4, h5, h6, p, body {
   font-family: 'Whitney SSm A', 'Whitney SSm B', HelveticaNeue, 'Helvetica Neue', HelveticaNeueRoman, HelveticaNeue-Roman, 'Helvetica Neue Roman', Helvetica, Tahoma, Geneva, Arial, sans-serif;;
@@ -72,7 +72,7 @@ em {
   font-style: italic;
 }
 ul, ol {
-  padding-left: 38px;
+  padding-left: 20px;
   margin-bottom: 30px;
 }
 ul {
@@ -82,7 +82,7 @@ ol {
   list-style-type: upper-hexadecimal;
 }
 ul li, ol li {
-  margin: 16px 0;
+  margin: 14px 0;
 }
 h1 + ul, h2 + ul, h3 + ul, h4 + ul, h5 + ul, h6 + ul, h1 + ol, h2 + ol, h3 + ol, h4 + ol, h5 + ol, h6 + ol {
   margin-top: -16px;
